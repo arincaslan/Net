@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Header -->
+    <header class="header text-center text-white" style="background-image: linear-gradient(to right bottom,rgba(34, 38, 114, 1),rgba(34, 38, 114, 1));">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+
+            <h1>Ürünlerimiz</h1>
+            <p class="lead-2 opacity-90 mt-6">Sizlerinde Ürünlerinizi Bu Şekilde Gösteren Bir Sayfanız Neden Olmasın ? </p>
+
+          </div>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <section class="section bg-gray">
+        <div class="container">
+          <div class="row gap-y">
+
+            {% for product in urunler %}
+            <div class="col-md-6 col-xl-4">
+              <div class="product-3 mb-3">
+                <a class="product-media" href="{% url 'article:productDetail' productslug=product.product_slug %}">
+                  <span class="badge badge-pill badge-primary badge-pos-left">New</span>
+                  <img style="width: 100%;" src="{{ MEDIA_URL }}{{ product.product_image }}" alt="product">
+                </a>
+
+                <div class="product-detail">
+                  <h6><a href="{% url 'article:productDetail' productslug=product.product_slug %}">{{product.product_title}}</a></h6>
+                  <div class="product-price">{{product.product_price}} {{product.product_price_unit}}</div>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+        <div class="pagination">
+          <span class="step-links">
+            {% if urunler.has_previous %}
+            <div class="btn btn-primary custom-button shadow-sm" style="cursor : pointer; display: block; justify-content: center;">
+              <a href="?page=1">&laquo; first </a>
+              </div>
+              <div class="btn btn-primary custom-button shadow-sm" style="cursor : pointer; display: block; justify-content: center;">
+                <a href="?page={{ urunler.previous_page_number }}">previous</a>
+              </div>
+
+
+
+            {% endif %}
+
+            {% for i in urunler.paginator.page_range %}
+
+                 <div class="btn btn-primary custom-button shadow-sm" style="cursor : pointer; display: block; justify-content: center;">
+                   <a style="color : white;" class="page-numbers {% if i == urunler.number %}current{% endif %}" href="?page={{forloop.counter}}">{{forloop.counter}}</a>
+                 </div>
+
+             {% endfor %}
+
+            {% if urunler.has_next %}
+            <div class="btn btn-primary custom-button shadow-sm" style="cursor : pointer; display: block; justify-content: center;">
+              <a href="?page={{ urunler.next_page_number }}">next</a>
+              </div>
+              <div class="btn btn-primary custom-button shadow-sm" style="cursor : pointer; display: block; justify-content: center;" >
+                <a href="?page={{ urunler.paginator.num_pages }}">last &raquo;</a>
+              </div>
+
+
+
+            {% endif %}
+          </span>
+        </div>
+      </section>
+
+    </main>
+
+{% endblock %}

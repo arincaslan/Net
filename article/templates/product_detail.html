@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Header -->
+    <header class="header text-white" style="background-image: linear-gradient(to right bottom,rgba(34, 38, 114, 1),rgba(34, 38, 114, 1));">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <h1 class="display-4">{{product.product_title}}</h1>
+
+
+          </div>
+        </div>
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Detail
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-md-6 ml-auto order-md-last mb-7 mb-md-0">
+              <div class="slider-dots-fill-primary text-center" data-provide="slider" data-dots="true">
+                <div><img src="{{ MEDIA_URL }}{{ product.product_image }}"></div>
+                <div><img src="{% static '/assets/img/shop/20.png' %}"></div>
+                <div><img src="{% static '/assets/img/shop/21.png' %}"></div>
+                <div><img src="{% static '/assets/img/shop/22.png' %}"></div>
+              </div>
+            </div>
+
+            <div class="col-11 mx-auto col-md-5 mx-md-0">
+              <p class="text-light my-6">Bu kısımda ister ürünlerinizin özellikleri, ister sektörünüze uygun bir şekilde hizmetleriniz tanımlanabilir.</p>
+
+              <ul class="list-unstyled">
+                <li><span class="mr-1 ti-check text-success small-3"></span> Kurumsal Web Sitesi Tasarımları</li>
+                <li><span class="mr-1 ti-check text-success small-3"></span> Web Siteleriniz İçin Seo Çalışmaları</li>
+                <li><span class="mr-1 ti-check text-success small-3"></span> Ürünlerinizi Sergileyebilmeniz İçin Estetik Portfolyo</li>
+                <li><span class="mr-1 ti-check text-success small-3"></span> Mobil Uygulamalar</li>
+              </ul>
+
+              <div class="row gap-y align-items-center text-center bg-light rounded p-5 mt-7">
+                <div class="col-md-auto ml-auto order-md-last">
+                  <h4  class="lead-5 mb-0 lh-1 fw-500 align-items-center text-center">{{product.product_title}} : {{product.product_price}} {{product.product_price_unit}}</h4>
+                  <small class="text-lighter">+ Kargo Bedeli</small>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <hr class="my-8">
+
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h3>Ürün Açıklaması</h3>
+
+              <p>{{product.product_content|safe}}</p>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+    </main>
+
+
+{% endblock %}

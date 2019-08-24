@@ -1,0 +1,253 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+
+
+    <!-- Styles -->
+    <link href="{% static 'assets/css/page.min.css'%}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css'%}" rel="stylesheet">
+
+
+
+    <!-- Header -->
+    <header class="header text-white h-fullscreen overflow-hidden" style="background-image: linear-gradient(to right bottom,rgba(34, 38, 114, 1),rgba(34, 38, 114, 1));">
+      <canvas class="constellation" data-radius="0"></canvas>
+      <div class="container position-static">
+        <div class="row align-items-center h-100">
+
+          <div class="col-lg-7">
+            <h1 class="display-4 fw-500">Sizin <span class="fw-400 pl-2" data-typing="Ticaretiniz İçin, Tanınmanız İçin, Reklamınız İçin, Adınız İçin, Müşteriniz İçin, Kazanmanız İçin" data-type-speed="80"></span></h1>
+            <p class="lead mt-5 mb-7 mb-md-9 w-80"><strong>Net-On</strong> modern, sade ve estetik web tasarımının adresi. Kurumsal firmalar için sektörlere özel tasarlanan web siteleri. </p>
+
+          </div>
+
+          <div class="col-lg-5 d-none d-lg-block">
+          </div>
+
+        </div>
+
+        <div class="d-none d-lg-block sample-blocks">
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-1.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-2.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-3.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="400" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-4.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-5.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="800" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-6.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="1000" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-7.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="1200" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-8.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="1400" data-aos-offset="0">
+          </a>
+
+          <a href="#" target="_blank">
+            <img class="shadow-6" src="{% static 'assets/img/preview/block-9.jpg' %}" alt="..." data-aos="fade-up" data-aos-delay="1700" data-aos-offset="0">
+          </a>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Features
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
+            <section id="features" class="section bb-1">
+              <div class="container">
+                <header class="section-header">
+                  <small>Çalışmalarımız</small>
+                  <h2>Emeğinizin karşılığını eksiksiz alın.</h2>
+                  <hr>
+                  <p class="lead">Talep kitlenizin sizi bulabilmesi için. Bizler de sizler gibi müşterilerimiz için en iyisini yapıyoruz. </p>
+                </header>
+
+
+                <div class="row gap-y align-items-center">
+
+                  <div class="col-md-6 mx-auto col-lg-4 text-center text-lg-right">
+                    <p class="text-info lead-6"><i class="icon-wallet"></i></p>
+                    <h5>Mobil Uygulama Hizmeti</h5>
+                    <p>Uygulamaların %85'inin web yönlendirmesiyle olduğunu biliyor muydunuz? Websitenizle uyumlu ve entegre mobil uygulama hizmetleri vermekteyiz.</p>
+                    <br><br>
+
+                    <p class="text-info lead-6"><i class="icon-linegraph"></i></p>
+                    <h5>Sektörler İçin Özelleştirilmiş Web Tasarımları</h5>
+                    <p>En güncel yazılım teknikleriyle ,ticaretinize ve talep kitlenize özel tasarlanan web sitesi hizmeti.</p>
+                  </div>
+
+
+                  <div class="col-lg-4 text-center px-5 py-7 py-lg-0">
+                    <img src="{% static '/assets/img/preview/anasayfa1.jpg' %}" alt="phone">
+                  </div>
+
+
+                  <div class="col-md-6 mx-auto col-lg-4 text-center text-lg-left">
+                    <p class="text-info lead-6"><i class="icon-clipboard"></i></p>
+                    <h5>Ticaretinize ve Talep Kitlenize Özel Reklam Hizmeti</h5>
+                    <p>Web siteniz ve mobil uygularınız için SEO ve reklam hizmetleri. Sizler En Üst Sırada Olun.</p>
+                    <br><br>
+
+
+                </div>
+
+              </div>
+            </section>
+
+
+            <!--
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            | Experts
+            |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+            !-->
+            <section id="experts" class="section bg-gray">
+              <div class="container">
+                <header class="section-header">
+                  <small>Uzmanlarımız</small>
+                  <h2>Yazılım Uzmanlarımız</h2>
+                  <hr>
+                  <p class="lead">Yazılım ekibimiz ve yöneticilerimizle tanışın.</p>
+                </header>
+
+
+                <div class="row gap-y d-flex justify-content-center">
+
+                  <div class="col-6 col-lg-3">
+                    <a class="card shadow-1 hover-shadow-6" href="#">
+                      <img class="card-img-top" src="{% static '/assets/img/avatar/5.jpg' %}" alt="avatar">
+                      <div class="card-body text-center">
+                        <h6 class="mb-0">Arınç Aslan</h6>
+                        <small class="small-4 text-lightest text-uppercase ls-2">Web Tasarmı Uzmanı</small>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-6 col-lg-3">
+                    <a class="card shadow-1 hover-shadow-6" href="#">
+                      <img class="card-img-top" src="{% static '/assets/img/avatar/6.jpg' %}" alt="avatar">
+                      <div class="card-body text-center">
+                        <h6 class="mb-0">Berk Elmas</h6>
+                        <small class="small-4 text-lightest text-uppercase ls-2">Web Tasarımı Uzmanı</small>
+                      </div>
+                    </a>
+
+
+                </div>
+                <div class="col-6 col-lg-3">
+                  <a class="card shadow-1 hover-shadow-6" href="#">
+                    <img class="card-img-top" src="{% static '/assets/img/avatar/6.jpg' %}" alt="avatar">
+                    <div class="card-body text-center">
+                      <h6 class="mb-0">Hakan Hüdaverdi</h6>
+                      <small class="small-4 text-lightest text-uppercase ls-2">Web Tasarımı Uzmanı</small>
+                    </div>
+                  </a>
+
+
+              </div>
+
+              </div>
+            </section>
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Testimonials
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <small>Müşteri Memnuniyeti</small>
+            <h2>Sizlerden Gelen Değerli Yorumlar</h2>
+            <hr>
+            <p class="lead">Sizlerin Memnuniyeti Bizim Gurur Tablomuz.</p>
+            <p>İletişim formuna yazdığınız geri dönüşlerden bir kesit.</p>
+          </header>
+
+
+          <div data-provide="slider" data-dots="true" data-autoplay="false" data-slides-to-show="2">
+            <div class="p-5">
+              <div class="card border hover-shadow-6">
+                <div class="card-body px-5">
+                  <div class="row">
+                    <div class="col-auto mr-auto">
+                      <h6><strong>Tasarım Kalitesi</strong></h6>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="rating mb-3">
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>Mükemmel, kapsamlı, profesyonel. Ve en önemlisi, beni iyi gösteriyor! Teşekkür ederim.</p>
+                  <p class="small-2 text-lighter mb-0">By <a class="text-inherit" href="https://themeforest.net/ratings/2784705" target="_blank"><em>Mustafa Çelik</em></a></p>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="p-5">
+              <div class="card border hover-shadow-6">
+                <div class="card-body px-5">
+                  <div class="row">
+                    <div class="col-auto mr-auto">
+                      <h6><strong>Kod Kalitesi</strong></h6>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="rating mb-3">
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                        <label class="fa fa-star active"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>Gerçekten iyi organize edilmiş kod, duyarlı müşteri hizmetleri. para için mükemmel değer.</p>
+                  <p class="small-2 text-lighter mb-0">By <a class="text-inherit" href="https://themeforest.net/ratings/2739368" target="_blank"><em>Hakan Hüdaverdi</em></a></p>
+
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+                <!-- Scripts -->
+                <script src="{% static 'assets/js/page.min.js' %}"></script>
+                <script src="{% static 'assets/js/script.js' %}"></script>
+{% endblock %}

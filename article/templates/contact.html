@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+
+  <body>
+
+
+
+    <!-- Header -->
+    <header style="background-image: linear-gradient(to right bottom,rgba(34, 38, 114, 1),rgba(34, 38, 114, 1));" class="header pt-10 pb-0">
+      <div class="container text-center">
+        <h1 style= "color:white"; class="display-4">Bize Ulaşın</h1>
+        <p  class="lead-2 mt-6" style= "color:white"; >Aklınıza takılan soru işaretlerini gidermek için bizlere ulaşın. </p>
+
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Contact form
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+
+          <div class="row">
+            <form id="contact-form" class="col-lg-6 mx-auto p-6 bg-black rounded" method="POST">
+              {% csrf_token %}
+              <div id="success-message" style="display : none; transition : all .5s;" class="alert alert-success d-on-success">İletiniz alınmıştır sizlere enkısa sürede dönüş yapacağız</div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input class="form-control form-control-lg" type="text" id="isim" name="isim" placeholder="İsim Soyad">
+                </div>
+
+                <div class="form-group col-md-6">
+                  <input class="form-control form-control-lg" type="email" id="email" name="email" placeholder="Email Adresi">
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <textarea class="form-control form-control-lg" rows="4" id="mesaj" placeholder="Mesaj" name="mesaj"></textarea>
+              </div>
+
+              <div class="text-center">
+                <button class="btn btn-lg btn-primary" type="submit">Gönder</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Map
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section text-white bg-dark bg-img" style="background-image: {% static '/assets/img/thumb/14.jpg' %}" data-overlay="6">
+        <div class="container">
+          <div class="row gap-y align-items-center">
+
+            <div class="col-md-5">
+              <p class="text-uppercase small opacity-70 fw-600 ls-1">Merkez Ofisimiz</p>
+              <h5>İstanbul, Türkiye</h5>
+              <br>
+              <p>2651 Main Street, Suit 124<br>Seattle, WA, 98101</p>
+              <p>Phone: +1 987 123 6548<br>Email: hello@thetheme.io</p>
+              <br>
+              <h6>Follow Us</h6>
+              <div class="social social-sm social-inverse">
+                <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                <a class="social-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-md-7">
+
+              <iframe class="h-400 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24095.323995307357!2d29.110268409662584!3d40.983331125394535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac8a7d44b6587%3A0x208a1d8ff0bf7e10!2zQXRhxZ9laGlyLCBLw7zDp8O8a2Jha2thbGvDtnksIDM0NzUwIER1ZHVsbHUgT3NiL0F0YcWfZWhpci_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1565997579960!5m2!1str!2str" allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main><!-- /.main-content -->
+
+  </body>
+{% endblock %}

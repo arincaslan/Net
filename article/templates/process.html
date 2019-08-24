@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Header -->
+    <header class="header bg-gray pt-10 pb-01" style="background-image:linear-gradient(to right bottom,rgba(97, 104, 224, 1),rgba(0, 0, 0, 0));">
+      <div class="container text-center">
+        <h1 class="display-4">İş Süreci</h1>
+        <p class="lead-2 mt-6">Sizlerin talepleri doğrultusunda adım adım ve planlı bir şekilde çalışıyoruz. Bu adımlar aşağıdaki gibidir.</p>
+      </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Services
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <div class="row gap-y align-items-center">
+
+            <div class="col-md-6 text-md-right">
+
+              <h3 class="fw-500">Adım 1: Müşteri İle Toplantı</h3>
+              <br>
+              <p>Müşteri ile toplantı yapılarak; müşterinin istediği tarz ve öncelikleri kayıt edilir. Gerekliyse Logo Tasarımı konusunda fikir edinilir. Toplantı sonucunda talep edilen web sitesi için hazırlıklara başlanmış olunur. </p>
+            </div>
+
+            <div class="col-md-5 mx-auto">
+              <img class="rounded-md" src="{% static '/assets/img/thumb/17.jpg'%}" alt="...">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="container">
+          <div class="row gap-y align-items-center">
+
+            <div class="col-md-6 text-center text-md-left order-md-2">
+
+              <h3 class="fw-500">Adım 2: İçeriklerin Düzenlenmesi ve Web Sitesi Kodlanması</h3>
+              <br>
+              <p>Müşterinin firmasına özel ve öncelikli içerikleri müşteriden alınır. Sektöre uygun içerik çalışması aynı zamanda ekibimizce yapılır. Web sitesi kodlaması yapılır ve içerikler kodlanan web sitesine eklenir. Bu adım genel olarak iş sürecini kapsamaktadır. Müşterinin içeriklerini vermesinin üzerine 2 hafta süre içerisinde bu adım tamamlanır.</p>
+            </div>
+
+            <div class="col-md-5 mx-auto">
+              <img class="rounded-md" src="{% static '/assets/img/thumb/5.jpg'%}" alt="...">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="container">
+          <div class="row gap-y align-items-center">
+
+            <div class="col-md-6 text-md-right">
+
+              <h3 class="fw-500">Adım 3: Revizyon ve Seo Çalışmaları</h3>
+              <br>
+              <p>Çıkan ürün müşteriye gösterilir. İstenen değişiklikler varsa 1 hafta içerisinde düzenlenir. Sürecin bitiminde siteniz yayına alınır. Arzu edildiği taktirde Müşterimiz için Seo çalışması yapılır ve sizlerle birlikte dijital pazarlama stratejileri belirlenir.</p>
+            </div>
+
+            <div class="col-md-5 mx-auto">
+              <img class="rounded-md" src="{% static '/assets/img/thumb/7.jpg'%}" alt="...">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+{% endblock %}
