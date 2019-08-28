@@ -25,7 +25,7 @@ SECRET_KEY = '_kesi!15@lg*%#=q$a=cr%vm8ojgsvdk+7_+fqyin85omjyn%p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '206.189.52.14', 'net-on.tech', 'wwww.net-on.tech']
+ALLOWED_HOSTS = ['localhost', '206.189.52.14', 'net-on.tech', 'www.net-on.tech']
 
 
 # Application definition
